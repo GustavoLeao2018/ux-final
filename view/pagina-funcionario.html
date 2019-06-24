@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        @import "../node_modules/w3-css/3/w3.css";
+        @import "../css/estilo.css";
+    </style>
+
+    <script src="../node_modules/lorem-ipsum-js/src/lorem-ipsum.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/funcoes.js"></script>
+    <script src="../js/classes.js"></script>
+    <script src="../js/base.js"></script>
+
+    <title id="titulo-subtitulo"></title>
+</head>
+
+<body>
+    <div class="w3-container">
+        <header class="w3-teal w3-center">
+            <hgroup>
+                <h1 id="titulo"></h1>
+                <h2 id="subtitulo"></h2>
+            </hgroup>
+        </header>
+
+        <nav class=" w3-bar w3-teal">
+            <a href="#home" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
+            <a href="#hotel-status" class="w3-bar-item w3-button w3-mobile ">Hotel Status</a>
+            <a href="#reservations" class="w3-bar-item w3-button w3-mobile ">Reservations</a>
+            <a href="#room-services" class="w3-bar-item w3-button w3-mobile ">Room Services</a>
+            <a href="#messages" class="w3-bar-item w3-button w3-mobile ">
+                Messages
+                <span class="w3-badge w3-red" id="quantidade-mensagens"></span>
+            </a>
+        </nav>
+
+        <main class="w3-panel">
+            <section>
+                
+                <input type="search" class="w3-input w3-border w3-border-teal w3-round" placeholder="Do your search for rooms and reservations."/> 
+                
+                <article id="home"></article>
+                <article id="hotel-status">
+                    <h3 class="w3-center">Hotel Status</h3>
+
+                    <div id="status-hotel"></div>
+                </article>
+                <article id="reservations">
+                    <h3 class="w3-center">Reservations</h3>
+                    
+                    <button class="w3-btn w3-teal" onclick="document.getElementById('cadastrar').style.display = 'block'">
+                        New Reservation
+                    </button>
+
+                    <div id="cadastrar" class="w3-modal">
+                        <div class="w3-modal-content">
+                            <div class="w3-container">
+                                <span onclick="document.getElementById('cadastrar').style.display='none'"
+                                      class="w3-button w3-xlarge w3-transaparent w3-display-topright">
+                                      &times;
+                                </span>
+
+                                <div class="w3-container w3-panel w3-teal w3-center">
+                                    <p><b>Register a new reservation</b></p>
+                                </div>
+                                
+                                <p class="w3-container">
+                                    <form action="#">
+                                        <label for="name"> Name: </label>
+                                        <input type="text" class="w3-input" placeholder="Enter your name"/>         
+                                        <label for="user"> User: </label>
+                                        <input type="text" class="w3-input" placeholder="Enter your user"/>
+
+                                        <label for="email"> Email: </label>
+                                        <input type="email" class="w3-input" placeholder="Enter your email"/>
+
+                                        <label for="senha"> Senha: </label>
+                                        <input type="senha" class="w3-input" placeholder="Enter your password"/>
+
+                                        <div class="w3-panel">
+                                            <input type="submit" class="w3-btn w3-teal w3-right" value="To Register"/>
+                                        </div>
+                                    </form>                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="reservas"></div>
+                </article>
+                <article id="room-services">
+
+                </article>
+                <article id="messages">
+                    <h3 class="w3-center">Messages</h3>
+
+                    <div id="mensagens"></div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer class="w3-teal w3-container">
+        <p>&copy; Eagle hotel - Created by Gustavo Leão and Nícolas Machado. </p>
+    </footer>
+</body>
+
+</html>
